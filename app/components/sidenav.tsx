@@ -29,7 +29,7 @@ const Sidenav = () => {
     }));
   };
 
-  function recursiveGroupCheck(routes: Routes[], path: string, parents: string[] = []): string[] | null {
+  function recursiveGroupCheck(routes: Routes[], path: string | null, parents: string[] = []): string[] | null {
     for (const route of routes) {
       if(route.type === 'route' && (route as Route).path === path) {
         return parents;

@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { createTheme, Theme } from '@mui/material/styles';
 import { useFont } from '../fontContext';
 
-type ThemeMode = 'light' | 'dark';
+export type ThemeMode = 'light' | 'dark';
 type CustomThemes = Record<string, Theme>;
 
 const LOCAL_STORAGE_THEME_MODE_KEY = 'themeMode';

@@ -15,7 +15,7 @@ import LandingPage from './(views)/(public)/home3';
 function FontWrapper() {
   const { currentTheme, themeMode, toggleThemeMode } = useThemeManager();
   const [settingsOpen, setSettingsOpen] = useState(false);
-  // const drawerWidth = 240;
+
   const toggleSettings = () => {
     setSettingsOpen((prev) => !prev);
   }
@@ -23,6 +23,7 @@ function FontWrapper() {
   function closeSettings() {
     setSettingsOpen(false);
   }
+
   return (
     <Box>
       <ThemeProvider theme={currentTheme}>

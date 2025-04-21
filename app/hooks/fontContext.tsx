@@ -1,3 +1,4 @@
+"use client"
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Font = 'Roboto' | 'Poppins' | 'Inter' | string;
