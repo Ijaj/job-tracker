@@ -4,6 +4,7 @@ import { Settings } from '@mui/icons-material';
 import FontSelector from '@/app/components/fontSelector';
 import { AppBar, Box, Checkbox, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import { ThemeMode } from "@/app/hooks/theme";
+import Link from "next/link";
 
 export default function LoginAppBar(
   { themeMode, toggleThemeMode }: { themeMode: ThemeMode, toggleThemeMode: () => void }
@@ -27,7 +28,8 @@ export default function LoginAppBar(
         }}>
         <Box display={'flex'}>
           <Toolbar>
-            <Typography variant="h4" fontWeight={500}>Job Tracker BD</Typography>
+            {/* <Typography variant="h4" fontWeight={500}>Job Tracker BD</Typography> */}
+            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}><Typography variant="h4" fontWeight={500}>Job Tracker BD</Typography></Link>
           </Toolbar>
           <Box flex={1} />
           <Box display={'flex'} alignItems={'center'}>

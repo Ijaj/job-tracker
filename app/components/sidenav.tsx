@@ -62,7 +62,7 @@ const Sidenav = () => {
                 <route.icon />
               </ListItemIcon>
             )}
-            <ListItemText primary={route.title} />
+            <ListItemText primary={route.title} sx={{ fontWeight: 300 }} />
           </ListItemButton>
         );
       } else if (r.type === 'group') {
@@ -75,7 +75,7 @@ const Sidenav = () => {
                   <route.icon />
                 </ListItemIcon>
               )}
-              <ListItemText primary={route.title} />
+              <ListItemText primary={route.title} sx={{ fontWeight: 300 }} />
               {openGroups[route.id] ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={openGroups[route.id]} timeout="auto" unmountOnExit>

@@ -52,24 +52,25 @@ function DashboardLayoutComponent({ children }: Readonly<{ children: React.React
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />
-        <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", fontWeight: 300 }}>
         <AppBar
           position="fixed"
           sx={{
             zIndex: 1201,
             // width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`
-          }}>
-            <Box display={'flex'}>
-              <Toolbar>
-                <Typography variant="h4">{title}</Typography>
-              </Toolbar>
-              <Box flex={1} />
-              <Box display={'flex'} alignItems={'center'}>
-                <IconButton onClick={toggleSettings} sx={{ ml: 2 }}>
-                  <Settings />
-                </IconButton>
-              </Box>
+          }}
+        >
+          <Box display={'flex'}>
+            <Toolbar>
+              <Typography variant="h4">{title}</Typography>
+            </Toolbar>
+            <Box flex={1} />
+            <Box display={'flex'} alignItems={'center'}>
+              <IconButton onClick={toggleSettings} sx={{ ml: 2 }}>
+                <Settings />
+              </IconButton>
             </Box>
+          </Box>
         </AppBar>
         <Drawer
           sx={{
@@ -88,20 +89,20 @@ function DashboardLayoutComponent({ children }: Readonly<{ children: React.React
           <Sidenav />
         </Drawer>
         <Drawer
-            anchor="right"
-            open={settingsOpen}
-            onClose={closeSettings}
-            sx={{ width: 240, zIndex: 1201, flexShrink: 0, '& .MuiDrawer-paper': { width: 240, boxSizing: 'border-box' } }}
-          >
-            <Box sx={{ padding: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
-              <FontSelector />
-              <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} mt={2}>
-                <Typography variant="body1">Dark Mode</Typography>
-                <Checkbox checked={themeMode === 'dark'} onChange={toggleThemeMode} />
-              </Box>
+          anchor="right"
+          open={settingsOpen}
+          onClose={closeSettings}
+          sx={{ width: 240, zIndex: 1201, flexShrink: 0, '& .MuiDrawer-paper': { width: 240, boxSizing: 'border-box' } }}
+        >
+          <Box sx={{ padding: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <FontSelector />
+            <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} mt={2}>
+              <Typography variant="body1">Dark Mode</Typography>
+              <Checkbox checked={themeMode === 'dark'} onChange={toggleThemeMode} />
             </Box>
-          </Drawer>
-        <Box>
+          </Box>
+        </Drawer>
+        <Box sx={{ width: '100%' }}>
           <Box>
             <Toolbar />
           </Box>

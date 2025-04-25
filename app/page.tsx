@@ -10,6 +10,7 @@ import { Settings } from "@mui/icons-material";
 import FontSelector from './components/fontSelector';
 import { FontProvider } from './hooks/fontContext';
 import LandingPage from './(views)/(public)/home3';
+import Link from 'next/link';
 // import HomePage from './(views)/(public)/home2';
 
 function FontWrapper() {
@@ -37,7 +38,7 @@ function FontWrapper() {
             }}>
             <Box display={'flex'}>
               <Toolbar>
-                <Typography variant="h4" fontWeight={500}>Job Tracker BD</Typography>
+                <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}><Typography variant="h4" fontWeight={500}>Job Tracker BD</Typography></Link>
               </Toolbar>
               <Box flex={1} />
               <Box display={'flex'} alignItems={'center'}>

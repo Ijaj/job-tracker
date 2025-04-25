@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Roboto, Inter, Poppins } from "next/font/google";
 import "./page.module.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geistSans = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistMono = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
