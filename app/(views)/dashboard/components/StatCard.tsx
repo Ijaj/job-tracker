@@ -9,7 +9,7 @@ interface StatCardProps {
   color?: string;
 }
 
-const StatCard = ({ label, value, icon, color = "#1976d2" }: StatCardProps) => {
+const StatCard = ({ label, value, icon = null, color = "#1976d2" }: StatCardProps) => {
   return (
     <Card sx={{ minWidth: 150, flexGrow: 1, height: 120 }}>
       <CardContent>
